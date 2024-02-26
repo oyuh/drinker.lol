@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secret for law</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+        Loading...
+      </div>
+
+<form id="secret" action="">
+    <div class="form-group">
+      <label for="password">secret</label>
+      <input id="password" type="password" required />
+      <button type="button" title="Reveal Password" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" id="eye-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <mask id="eye-open">
+              <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12V20H12H1V12Z" fill="#D9D9D9" stroke="black" stroke-width="1.5" stroke-linejoin="round" />
+            </mask>
+            <mask id="eye-closed">
+              <path d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12V20H12H1V12Z" fill="#D9D9D9" />
+            </mask>
+          </defs>
+          <path class="lid lid--upper" d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path class="lid lid--lower" d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <g mask="url(#eye-open)">
+            <g class="eye">
+              <circle cy="12" cx="12" r="4" fill="currentColor" />
+              <circle cy="11" cx="13" r="1" fill="black" />
+            </g>
+          </g>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" id="arrow-svg" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path d="m9.293 18.707 1.414-1.414L8.414 15H20v-2H3.586l5.707 5.707zM14.707 5.293l-1.414 1.414L15.586 9H4v2h16.414l-5.707-5.707z"/></svg>
+        <span class="sr-only">Reveal</span>
+      </button>
+    </div>
+    <!-- Add this at the end of your body tag -->
+    <div id="linkContainer" style="position: fixed; bottom: 0; width: 100%; text-align: center; display: none;">
+    <a id="dynamicLink" href="" style="padding: 10px; background-color: green; color: white; text-decoration: none; border-radius: 5px;">Go to Link</a>
+    <p id="typedWord" style="color: green;"></p>
+  </div>
+  
+  </form>
+
+
+<script src="script.js" defer></script>
+<script src="pass.js" defer></script>
+</body>
+</html>
